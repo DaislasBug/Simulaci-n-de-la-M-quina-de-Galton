@@ -1,2 +1,2 @@
-# Simulaci-n-de-la-M-quina-de-Galton
+# Simulación de la Máquina de Galton
 Proyecto 3 bootcamp UCAMP
