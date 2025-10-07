@@ -1,27 +1,21 @@
-# NOMBRE_APELLIDO_proyectoM3.py
+# David_Flores_proyectoM3.py
 
 import numpy as np
 import matplotlib.pyplot as plt
 
-
 NUM_CANICAS = 3000  
 NUM_NIVELES = 12     
 
-# -----------------------------------------------------------------------------
 # FUNCIÓN 1: Simulación de la Máquina de Galton
-# -----------------------------------------------------------------------------
 def simular_galton(num_canicas, num_niveles):
     """
     Simula la caída de canicas en la Máquina de Galton.
-
     El número final del contenedor es igual al número de veces que la canica
     se desvió a la derecha (equivalente a un 'éxito' en una distribución binomial).
     El número de contenedores será 'num_niveles + 1', y los índices irán de 0 a 'num_niveles'.
-
     Parámetros:
     - num_canicas (int): Cantidad de canicas a simular.
     - num_niveles (int): Cantidad de niveles de obstáculos (número de pasos aleatorios).
-
     Retorna:
     - resultados (numpy.ndarray): Un array con la posición final (índice del contenedor)
                                   de cada canica.
@@ -41,14 +35,10 @@ def simular_galton(num_canicas, num_niveles):
 
     print("Simulación finalizada.")
     return resultados
-
-# -----------------------------------------------------------------------------
 # FUNCIÓN 2: Graficación de Resultados
-# -----------------------------------------------------------------------------
 def graficar_resultados(resultados, num_niveles):
     """
     Genera un histograma a partir de los resultados de la simulación.
-
     Parámetros:
     - resultados (numpy.ndarray): Array con la posición final de cada canica.
     - num_niveles (int): Cantidad de niveles, usado para definir los límites de los contenedores.
@@ -72,11 +62,7 @@ def graficar_resultados(resultados, num_niveles):
     # Establecer título y etiquetas de ejes
     plt.title('Simulación de la Máquina de Galton', fontsize=16) # Título
     plt.xlabel('Distribución de canicas (Contenedor Final - 0 a 12)', fontsize=12) # Nombre del eje X
-    plt.ylabel('Cantidad de canicas test', fontsize=12) # Nombre del eje Y
-
-    # Ajustar los límites del eje X para que se vea similar al ejemplo
-    #plt.xlim(-0.5, num_niveles + 0.5)
-
+    plt.ylabel('Cantidad de canicas', fontsize=12) # Nombre del eje Y
 
     # Imprimir el histograma
     plt.show()
